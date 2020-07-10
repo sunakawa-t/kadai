@@ -13,6 +13,16 @@
 /**
  * Set error reporting and display errors settings.  You will want to change these when in production.
  */
+use Fuel\Core\Config;
+use Fuel\Core\HttpBadRequestException;
+use Fuel\Core\HttpNoAccessException;
+use Fuel\Core\HttpNotFoundException;
+use Fuel\Core\HttpServerErrorException;
+use Fuel\Core\Profiler;
+use Fuel\Core\Request;
+use Fuel\Core\Response;
+use Fuel\Core\Router;
+
 error_reporting(-1);
 ini_set('display_errors', 1);
 

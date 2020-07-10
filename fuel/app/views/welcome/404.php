@@ -2,7 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title><?php echo $title; ?></title>
+	<title><?php use Fuel\Core\Asset;
+use Fuel\Core\Fuel;
+
+echo $title; ?></title>
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<style>
 		#logo{

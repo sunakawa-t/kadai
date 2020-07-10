@@ -27,7 +27,8 @@
 			echo "<tr><td>".$aaa['id']."</td>";
 			echo "<td>".$aaa['name']."</td>";
 			echo "<td>".$aaa['age']."</td>";
-			echo "<td>".$aaa['registry_datetime']."</td></tr>";
+			echo "<td>".$aaa['registry_datetime']."</td>";
 		 } ?>
+		 <td><input type = "submit" name = "delite" value = '削除'></td></tr>;
      </table>
 </html>

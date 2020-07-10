@@ -6,6 +6,8 @@
  * @package  app
  * @extends  Presenter
  */
+use Fuel\Core\Presenter;
+
 class Presenter_Welcome_Hello extends Presenter
 {
 	/**

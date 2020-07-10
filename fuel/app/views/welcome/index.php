@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>FuelPHP Framework</title>
-	<?php echo Asset::css('bootstrap.css'); ?>
+	<?php use Fuel\Core\Asset;use Fuel\Core\Fuel;
+echo Asset::css('bootstrap.css'); ?>
 	<style>
 		#logo{
 			display: block;

@@ -2,7 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Hello, <?php echo $name; ?></title>
+	<title>Hello, <?php use Fuel\Core\Asset;use Fuel\Core\Fuel;
+echo $name; ?></title>
 	<?php echo Asset::css('bootstrap.css'); ?>
 	<style>
 		#logo{
