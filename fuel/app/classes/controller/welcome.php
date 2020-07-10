@@ -79,6 +79,11 @@ class Controller_Welcome extends Controller
 	        $query["test"] = $this->delete($id,$name,$age,$registry_datetime);
     	    return Response::forge(View::forge('welcome/kadai',$query));
 	    }
+
+	    if(isset($_POST["delete2"])){
+	        $query["test"] = $this->delete($id,$name,$age,$registry_datetime);
+	        return Response::forge(View::forge('welcome/kadai',$query));
+	    }
 	}
 	public function update($id,$name,$age,$registry_datetime){
         if($id != ""  && $name != "" && empty("$age") && empty("$registry_datetime")){
