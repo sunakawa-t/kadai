@@ -76,13 +76,8 @@ class Controller_Welcome extends Controller
 	    }
 
 	    if(isset($_POST["delite"])){
-	        $query["test"] = $this->delete($id,$name,$age,$registry_datetime);
+	        $query["test"] = $this->delete($id);
     	    return Response::forge(View::forge('welcome/kadai',$query));
-	    }
-
-	    if(isset($_POST["delete2"])){
-	        $query["test"] = $this->delete($id,$name,$age,$registry_datetime);
-	        return Response::forge(View::forge('welcome/kadai',$query));
 	    }
 	}
 	public function update($id,$name,$age,$registry_datetime){
@@ -104,7 +99,7 @@ class Controller_Welcome extends Controller
         return $query['test'];
     }
 
-    public function delete($id,$name,$age,$registry_datetime){
+    public function delete($id){
         if($id != ""){
             DB::DELETE('admin')->WHERE ('id',"$id")->execute();
             $query['test'] = DB::select()->from('admin')->execute();

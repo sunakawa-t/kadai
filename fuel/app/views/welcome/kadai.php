@@ -21,16 +21,19 @@
     	 年齢：<input type = "text" name = "ageu" id = "ageu"><br/>
     	 日時：<input type = "text" name = "registry_datetime" id = "registry_datetime"></p>
 	</form>
+
 	<?php echo "<table border='1'>";
-		echo "<tr style=background-color:#DBFF71;><th>ＩＤ</th><th>名前</th><th>年齢</th><th>レジストリ日時</th><th></th></tr>";
-		 foreach($test as $aaa){
-			echo "<tr><td>".$aaa['id']."</td>";
-			echo "<td>".$aaa['name']."</td>";
-			echo "<td>".$aaa['age']."</td>";
-			echo "<td>".$aaa['registry_datetime']."</td>";
-			echo "<form action=update method=POST>";
-			echo "<td><input type = submit name = delete2 id = delete2 value=削除></td>";
-			echo "</form></tr>";
-		 }
-		 echo "</table>" ?>
+        echo "<tr style=background-color:#DBFF71;><th>ＩＤ</th><th>名前</th><th>年齢</th><th>レジストリ日時</th><th></th></tr>";
+        foreach($test as $aaa){
+            echo "<tr><td>".$aaa['id']."</td>";
+            echo "<td>".$aaa['name']."</td>";
+            echo "<td>".$aaa['age']."</td>";
+            echo "<td>".$aaa['registry_datetime']."</td>";
+            echo "<form action = 'update' method = 'POST'>";
+            echo "<td><input type = submit name = delite  onclick = delite() value=削除></td>";
+            echo "<input type = 'hidden' id = 'id' name = 'id' value = ".$aaa['id']."></tr>";
+            echo "</form>";
+        }
+        echo "</table>";
+    ?>
 </html>
